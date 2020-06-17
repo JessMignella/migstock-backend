@@ -1,2 +1,2 @@
-# migstok
+# migstock
 Sistema de  estoque maravilible

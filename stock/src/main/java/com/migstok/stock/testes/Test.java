@@ -11,7 +11,7 @@ public class Test extends Product{
 		
     Product pd = new Product();
 		 pd.setName("mouse");
-		 pd.setQuantity(25);
+		 pd.setQuantity(26);
 		 
 		
 		 Product pd1 = new Product();

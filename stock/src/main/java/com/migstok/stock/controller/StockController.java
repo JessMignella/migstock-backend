@@ -8,6 +8,6 @@ public class StockController {
 
     @RequestMapping("/")
     public String tessste() {
-        return "testte";
+        return "udfcgbdfgfd";
     }
 }

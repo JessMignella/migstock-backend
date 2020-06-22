@@ -1,10 +1,36 @@
 package com.migstok.stock.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
 public class HistIn {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	@ManyToOne
+	@JoinColumn(name = "id_item")
+	private Item item;
+	private String typeEntry;
+	@ManyToOne
+	@JoinColumn(name = "id_respUser")
+	private ResponsibleUser respUser;
+	@ManyToOne
+	@JoinColumn(name = "id_userSystem")
+	private UserSystem userSystem;
 
 }

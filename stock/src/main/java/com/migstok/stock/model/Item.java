@@ -14,10 +14,12 @@ public class Item {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	@ManyToOne
+	@JoinColumn(name = "id_product")
 	private Product product;
 	private String itemCode;
 	private Double cost;
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.ORDINAL)
 	private StateItem state;
 
 	@Override

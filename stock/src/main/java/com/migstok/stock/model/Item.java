@@ -17,7 +17,7 @@ public class Item {
 	private Product product;
 	private String itemCode;
 	private Double cost;
-	@Enumerated(EnumType.ORDINAL)
+	@Enumerated(EnumType.STRING)
 	private StateItem state;
 
 	@Override

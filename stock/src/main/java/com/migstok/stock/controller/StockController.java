@@ -14,7 +14,7 @@ public class StockController {
     @Autowired
     ItemRepository itemRepository;
 
-    @RequestMapping("/")
+    @RequestMapping("/listItems")
     public List<ItemDto> listItems() {
         return ItemDto.converter(itemRepository.findAll());
     }

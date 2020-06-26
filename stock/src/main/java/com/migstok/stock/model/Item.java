@@ -8,8 +8,6 @@ import java.util.Objects;
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 public class Item {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

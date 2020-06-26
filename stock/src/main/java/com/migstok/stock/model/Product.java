@@ -3,14 +3,7 @@ package com.migstok.stock.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-
+import javax.persistence.*;
 import java.util.Objects;
 
 @Getter
@@ -22,9 +15,9 @@ public class Product {
 	private Long id;
 	private String name;
 	private String model;
-	@Enumerated(EnumType.ORDINAL)
+	@ManyToOne
 	@JoinColumn(name = "id_type")
-	private ProductType type;
+	private Type type;
 
 
 	@Override
@@ -33,7 +26,7 @@ public class Product {
 				"id=" + id +
 				", name='" + name + '\'' +
 				", model='" + model + '\'' +
-				", type=" + type +
+				", type=" + type.getNameType() +
 				'}';
 	}
 
